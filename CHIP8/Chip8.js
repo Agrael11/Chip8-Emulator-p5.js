@@ -132,7 +132,7 @@ function step()
 	let dec = (opcode & 0xF000) >> 12;
 	if (opcodes[dec] != undefined)
 	{
-		if (debug)  console.log(opcode + "--" + dec + "--" + opcodes[dec]);
+		if (debugTesting)  console.log(opcode + "--" + dec + "--" + opcodes[dec]);
 		opcodes[dec](opcode);
 	}
 	else console.log("Instrction  0x"+ op.toString(16) + " not valid!");
