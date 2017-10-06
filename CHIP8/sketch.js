@@ -1,6 +1,7 @@
 var dz;
 var pulse;
 var ST = 0;
+var debug = false;
 
 var keyCodeMap = [];
 var keys = [];
@@ -132,6 +133,6 @@ function dropped(file)
 	{
 		WriteMemory8Bit(0x200+i, data.charCodeAt(i));
 	}
-	running = true;
+	if (!debug) running = true;
 	console.log("Rom loaded\n\n");
 }
